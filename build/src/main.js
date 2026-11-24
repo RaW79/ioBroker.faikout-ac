@@ -396,7 +396,7 @@ class FaikoutAdapter extends utils.Adapter {
                 this.log.info(`Discovery completed for "${name}": ${profile.deviceId} (${profile.appName}) – ${profile.activeFields.size} fields`);
                 if (obj.callback) {
                     this.sendTo(obj.from, obj.command, {
-                        result: `Erkannt: ${profile.deviceId} (${profile.appName || 'unbekannt'}) – ${profile.activeFields.size} Felder`,
+                        result: `Discovered: ${profile.deviceId} (${profile.appName || 'unknown'}) – ${profile.activeFields.size} fields`,
                     }, obj.callback);
                 }
             })

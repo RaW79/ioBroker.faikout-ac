@@ -521,7 +521,7 @@ class FaikoutAdapter extends utils.Adapter {
                             obj.from,
                             obj.command,
                             {
-                                result: `Erkannt: ${profile.deviceId} (${profile.appName || 'unbekannt'}) – ${profile.activeFields.size} Felder`,
+                                result: `Discovered: ${profile.deviceId} (${profile.appName || 'unknown'}) – ${profile.activeFields.size} fields`,
                             },
                             obj.callback,
                         );

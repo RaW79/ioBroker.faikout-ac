@@ -70,6 +70,9 @@ Install via ioBroker Admin:
 
 ## Changelog
 
+### 0.1.991
+- Fix German string in discovery callback
+
 ### 0.1.99
 - Fix device connection role (indicator.reachable), consumption role (value.power), preserve common.custom on object update, remove direct install link from doc
 

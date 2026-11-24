@@ -1,8 +1,21 @@
 {
     "common": {
         "name": "faikout-ac",
-        "version": "0.1.99",
+        "version": "0.1.991",
         "news": {
+            "0.1.991": {
+                "en": "Fix German string in discovery callback",
+                "de": "Deutschen String in Discovery-Callback korrigiert",
+                "ru": "Исправлена немецкая строка в обратном вызове обнаружения",
+                "pt": "Correcção de string alemã no callback de descoberta",
+                "nl": "Duitse string in discovery-callback gecorrigeerd",
+                "fr": "Correction chaîne allemande dans le callback de découverte",
+                "it": "Correzione stringa tedesca nel callback di scoperta",
+                "es": "Corrección cadena alemana en callback de descubrimiento",
+                "pl": "Poprawka niemieckiego ciągu w callbacku odkrywania",
+                "uk": "Виправлення німецького рядка у зворотному виклику виявлення",
+                "zh-cn": "修复发现回调中的德语字符串"
+            },
             "0.1.99": {
                 "en": "Fix device connection role (indicator.reachable), consumption role (value.power), preserve custom on object update",
                 "de": "Geraete-Verbindungsrolle (indicator.reachable), Verbrauchsrolle (value.power) korrigiert, custom bei Objekt-Update erhalten",
@@ -80,19 +93,6 @@
                 "pl": "Poprawka struktury obiektów: brakujący kanał, flagi read/write, nazwy w 11 językach",
                 "uk": "Виправлення структури об'єктів: відсутній канал, прапори read/write, назви 11 мовами",
                 "zh-cn": "修复对象结构：缺失通道、读写标志、11语言状态名称"
-            },
-            "0.1.93": {
-                "en": "Fix CI test setup for repochecker compliance",
-                "de": "CI-Test-Setup fuer Repochecker-Konformitaet korrigiert",
-                "ru": "Исправлена настройка CI-тестов для соответствия репочекеру",
-                "pt": "Correcção da configuração de testes CI para conformidade com repochecker",
-                "nl": "CI-testconfiguratie gecorrigeerd voor repochecker-conformiteit",
-                "fr": "Correction de la configuration des tests CI pour la conformité repochecker",
-                "it": "Correzione configurazione test CI per conformità repochecker",
-                "es": "Corrección de la configuración de pruebas CI para conformidad con repochecker",
-                "pl": "Poprawka konfiguracji testów CI dla zgodności z repochecker",
-                "uk": "Виправлення налаштування CI-тестів для відповідності репочекеру",
-                "zh-cn": "修复CI测试配置以符合repochecker要求"
             }
         },
         "titleLang": {
@@ -121,8 +121,15 @@
             "uk": "Адаптер для MQTT-мосту Faikout Daikin",
             "zh-cn": "Faikout Daikin MQTT 桥接适配器"
         },
-        "authors": ["RWS <RWS@nurfuerspam.de>"],
-        "keywords": ["faikout", "daikin", "climate-control", "mqtt"],
+        "authors": [
+            "RWS <RWS@nurfuerspam.de>"
+        ],
+        "keywords": [
+            "faikout",
+            "daikin",
+            "climate-control",
+            "mqtt"
+        ],
         "platform": "Javascript/Node.js",
         "icon": "faikout.png",
         "extIcon": "https://raw.githubusercontent.com/RaW79/ioBroker.faikout-ac/main/admin/faikout.png",
@@ -205,8 +212,12 @@
         "demandHeatbackNormal": 3,
         "demandHeatbackGuard": 6
     },
-    "encryptedNative": ["mqttPassword"],
-    "protectedNative": ["mqttPassword"],
+    "encryptedNative": [
+        "mqttPassword"
+    ],
+    "protectedNative": [
+        "mqttPassword"
+    ],
     "instanceObjects": [
         {
             "_id": "info",
