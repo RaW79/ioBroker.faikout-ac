@@ -70,6 +70,9 @@ Install via ioBroker Admin:
 
 ## Changelog
 
+### 0.1.99
+- Fix device connection role (indicator.reachable), consumption role (value.power), preserve common.custom on object update, remove direct install link from doc
+
 ### 0.1.98
 - Fix env_set state: read/write flags, role level
 

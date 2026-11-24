@@ -390,7 +390,7 @@ export const FIELDS: Record<string, FieldDef> = {
         },
         type: 'number',
         unit: 'W',
-        role: 'value.power.consumption',
+        role: 'value.power',
     },
     Whheating: {
         label: {

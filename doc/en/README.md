@@ -16,14 +16,12 @@ The Faikout is an ESP32-based device that connects to a Daikin air conditioner v
 
 ## Installation
 
-Install the adapter from the ioBroker repository or directly from the Git URL in Admin:
+Install the adapter via ioBroker Admin:
 
-1. Admin -> Adapters -> "Install from own URL" (GitHub icon)
-2. Enter the URL: `https://codeberg.org/RaW07/ioBroker.faikout-ac`
-3. Select branch: `main`
-4. Click Install
-
-The `build/` directory is included in the repository, so no manual TypeScript compilation is required.
+1. Open ioBroker Admin
+2. Go to **Adapters**
+3. Search for `faikout`
+4. Click **Install**
 
 ---
 

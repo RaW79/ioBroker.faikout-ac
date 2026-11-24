@@ -1,8 +1,21 @@
 {
     "common": {
         "name": "faikout-ac",
-        "version": "0.1.98",
+        "version": "0.1.99",
         "news": {
+            "0.1.99": {
+                "en": "Fix device connection role (indicator.reachable), consumption role (value.power), preserve custom on object update",
+                "de": "Geraete-Verbindungsrolle (indicator.reachable), Verbrauchsrolle (value.power) korrigiert, custom bei Objekt-Update erhalten",
+                "ru": "Исправлена роль подключения устройства (indicator.reachable), роль потребления (value.power), сохранение custom при обновлении объекта",
+                "pt": "Correcção da role de ligação do dispositivo (indicator.reachable), role de consumo (value.power), preservação de custom na actualização de objectos",
+                "nl": "Rol apparaatverbinding (indicator.reachable), verbruiksrol (value.power) gecorrigeerd, custom behouden bij objectupdate",
+                "fr": "Correction du rôle connexion appareil (indicator.reachable), rôle consommation (value.power), préservation custom lors mise à jour objet",
+                "it": "Correzione ruolo connessione dispositivo (indicator.reachable), ruolo consumo (value.power), conservazione custom aggiornamento oggetto",
+                "es": "Corrección rol conexión dispositivo (indicator.reachable), rol consumo (value.power), preservación custom en actualización de objeto",
+                "pl": "Poprawka roli połączenia urządzenia (indicator.reachable), roli zużycia (value.power), zachowanie custom przy aktualizacji obiektu",
+                "uk": "Виправлення ролі підключення пристрою (indicator.reachable), ролі споживання (value.power), збереження custom при оновленні об'єкта",
+                "zh-cn": "修复设备连接角色 (indicator.reachable)、消耗角色 (value.power)，对象更新时保留custom"
+            },
             "0.1.98": {
                 "en": "Fix env_set state: read/write, role level",
                 "de": "env_set-State korrigiert: read/write, Rolle level",
@@ -69,19 +82,6 @@
                 "zh-cn": "修复对象结构：缺失通道、读写标志、11语言状态名称"
             },
             "0.1.93": {
-                "en": "Fix CI test setup for repochecker compliance",
-                "de": "CI-Test-Setup fuer Repochecker-Konformitaet korrigiert",
-                "ru": "Исправлена настройка CI-тестов для соответствия репочекеру",
-                "pt": "Correcção da configuração de testes CI para conformidade com repochecker",
-                "nl": "CI-testconfiguratie gecorrigeerd voor repochecker-conformiteit",
-                "fr": "Correction de la configuration des tests CI pour la conformité repochecker",
-                "it": "Correzione configurazione test CI per conformità repochecker",
-                "es": "Corrección de la configuración de pruebas CI para conformidad con repochecker",
-                "pl": "Poprawka konfiguracji testów CI dla zgodności z repochecker",
-                "uk": "Виправлення налаштування CI-тестів для відповідності репочекеру",
-                "zh-cn": "修复CI测试配置以符合repochecker要求"
-            },
-            "0.1.92": {
                 "en": "Fix CI test setup for repochecker compliance",
                 "de": "CI-Test-Setup fuer Repochecker-Konformitaet korrigiert",
                 "ru": "Исправлена настройка CI-тестов для соответствия репочекеру",

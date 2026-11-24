@@ -102,7 +102,7 @@ class StateManager {
                 'zh-cn': '连接',
             },
             type: 'boolean',
-            role: 'indicator.connected',
+            role: 'indicator.reachable',
             read: true,
             write: false,
             def: false,
@@ -469,7 +469,7 @@ class StateManager {
             this.adapter.log.debug(`Skipping userModified state: ${id}`);
             return;
         }
-        await this.adapter.setObjectAsync(id, {
+        await this.adapter.extendObjectAsync(id, {
             type: 'state',
             common: this._buildStateCommon(def),
             native: { userModified: false },

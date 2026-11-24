@@ -117,7 +117,7 @@ export class StateManager {
                 'zh-cn': '连接',
             },
             type: 'boolean',
-            role: 'indicator.connected',
+            role: 'indicator.reachable',
             read: true,
             write: false,
             def: false,
@@ -525,9 +525,9 @@ export class StateManager {
             this.adapter.log.debug(`Skipping userModified state: ${id}`);
             return;
         }
-        // Always write – handles new creation and recovery after manual deletion.
-        // setObjectAsync bypasses the internal cache that setObjectNotExistsAsync relies on.
-        await this.adapter.setObjectAsync(id, {
+        // extendObjectAsync merges into the existing object, preserving common.custom
+        // (History/InfluxDB settings). Falls back to creation if the object does not exist yet.
+        await this.adapter.extendObjectAsync(id, {
             type: 'state',
             common: this._buildStateCommon(def),
             native: { userModified: false },
