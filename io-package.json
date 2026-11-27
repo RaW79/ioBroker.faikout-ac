@@ -93,7 +93,7 @@
                 "pl": "Poprawka języka komunikatów log, wymóg wersji admin, walidacja interwału",
                 "uk": "Виправлення мови лог-повідомлень, вимоги версії admin, валідації інтервалу",
                 "zh-cn": "修复日志消息语言、admin版本要求、间隔验证"
-            },
+            }
         },
         "titleLang": {
             "en": "Faikout AC",
