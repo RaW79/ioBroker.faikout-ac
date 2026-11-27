@@ -108,7 +108,7 @@ class FaikoutAdapter extends utils.Adapter {
                 port: mqttPort,
                 username: mqttUser || undefined,
                 password: mqttPassword || undefined,
-                clientId: `iobroker-faikout-${instanceId}`,
+                clientId: `iobroker-faikout-${this.host}-${instanceId}`,
                 setTimeoutFn: (cb, ms) => this.setTimeout(cb, ms),
                 clearTimeoutFn: (id) => this.clearTimeout(id as ioBroker.Timeout),
             },
@@ -247,6 +247,7 @@ class FaikoutAdapter extends utils.Adapter {
             // Demand control: activate lockmode on (re)connect for all demand devices
             for (const ctx of this.demandCtxMap.values()) {
                 this._publishDemandConfigParam(ctx.folder, 'lockmode', '1');
+                await this.setStateAsync(`${ctx.folder}.config.lockmode`, { val: true, ack: true });
                 if (ctx.cfg.demandLogLevel !== 'off') {
                     this.log.info(`Demand control: lockmode activated for "${ctx.folder}"`);
                 }
@@ -732,7 +733,7 @@ class FaikoutAdapter extends utils.Adapter {
             const targetId = `${this.namespace}.${folder}.env_set`;
             const publish = async (): Promise<void> => {
                 try {
-                    const state = await this.getStateAsync(sensorStateId);
+                    const state = await this.getForeignStateAsync(sensorStateId);
                     if (!state || state.val === null || state.val === undefined) {
                         return;
                     }
@@ -1215,7 +1216,7 @@ class FaikoutAdapter extends utils.Adapter {
             this._sendDemand(ctx, target);
         } else {
             this.log.info(
-                `Demand [${folder}] ${goingUp ? '↑' : '↓'} ${ctx.lastSent}%→${target}% gehalten, noch ${Math.round((delay - elapsed) / 1000)}s`,
+                `Demand [${folder}] ${goingUp ? '↑' : '↓'} ${ctx.lastSent}%→${target}% held, ${Math.round((delay - elapsed) / 1000)}s remaining`,
             );
         }
     }

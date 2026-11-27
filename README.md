@@ -70,6 +70,9 @@ Install via ioBroker Admin:
 
 ## Changelog
 
+### 0.1.992
+- Fix MQTT client-ID uniqueness (host-scoped), foreign state read for env sensor, lockmode state sync, English log messages
+
 ### 0.1.991
 - Fix German string in discovery callback
 

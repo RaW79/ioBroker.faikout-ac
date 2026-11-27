@@ -1,6 +1,6 @@
 {
   "name": "iobroker.faikout-ac",
-  "version": "0.1.991",
+  "version": "0.1.992",
   "description": "ioBroker adapter for Faikout Daikin MQTT bridge",
   "author": "RWS <RWS@nurfuerspam.de>",
   "license": "MIT",
@@ -16,8 +16,17 @@
   "bugs": {
     "url": "https://github.com/RaW79/ioBroker.faikout-ac/issues"
   },
-  "keywords": ["ioBroker", "faikout", "daikin", "climate-control"],
-  "files": ["build/", "admin/", "io-package.json"],
+  "keywords": [
+    "ioBroker",
+    "faikout",
+    "daikin",
+    "climate-control"
+  ],
+  "files": [
+    "build/",
+    "admin/",
+    "io-package.json"
+  ],
   "scripts": {
     "build": "tsc --build tsconfig.json",
     "watch": "tsc --build tsconfig.json --watch",
@@ -36,7 +45,7 @@
     "@types/node": "^22.0.0",
     "@iobroker/eslint-config": "^2.3.4",
     "@iobroker/testing": "^6.3.2",
-"rimraf": "^6.0.1",
+    "rimraf": "^6.0.1",
     "typescript": "^5.5.4"
   }
 }

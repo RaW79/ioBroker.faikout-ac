@@ -1,8 +1,21 @@
 {
     "common": {
         "name": "faikout-ac",
-        "version": "0.1.991",
+        "version": "0.1.992",
         "news": {
+            "0.1.992": {
+                "en": "Fix MQTT client-ID uniqueness, foreign state read for env sensor, lockmode state sync, English log messages",
+                "de": "MQTT-Client-ID eindeutig, Foreign-State-Lesen für Env-Sensor, Lockmode-State-Sync, englische Log-Meldungen",
+                "ru": "Уникальный ID клиента MQTT, чтение внешнего состояния для датчика env, синхронизация состояния lockmode, английские лог-сообщения",
+                "pt": "ID de cliente MQTT único, leitura de estado externo para sensor env, sincronização de estado lockmode, mensagens de log em inglês",
+                "nl": "Unieke MQTT-client-ID, lezen van externe state voor env-sensor, lockmode-state-sync, Engelse logmeldingen",
+                "fr": "ID client MQTT unique, lecture d'état externe pour capteur env, synchronisation état lockmode, messages log en anglais",
+                "it": "ID client MQTT univoco, lettura stato esterno per sensore env, sincronizzazione stato lockmode, messaggi log in inglese",
+                "es": "ID de cliente MQTT único, lectura de estado externo para sensor env, sincronización de estado lockmode, mensajes de log en inglés",
+                "pl": "Unikalny ID klienta MQTT, odczyt obcego stanu dla czujnika env, synchronizacja stanu lockmode, komunikaty log po angielsku",
+                "uk": "Унікальний ID клієнта MQTT, читання зовнішнього стану для датчика env, синхронізація стану lockmode, повідомлення логу англійською",
+                "zh-cn": "唯一MQTT客户端ID，env传感器的外部状态读取，lockmode状态同步，英文日志消息"
+            },
             "0.1.991": {
                 "en": "Fix German string in discovery callback",
                 "de": "Deutschen String in Discovery-Callback korrigiert",
@@ -81,19 +94,6 @@
                 "uk": "Виправлення мови лог-повідомлень, вимоги версії admin, валідації інтервалу",
                 "zh-cn": "修复日志消息语言、admin版本要求、间隔验证"
             },
-            "0.1.94": {
-                "en": "Fix object structure: missing channel, read/write flags, 11-language state names",
-                "de": "Objektstruktur korrigiert: fehlender Channel, read/write-Flags, 11-sprachige State-Namen",
-                "ru": "Исправлена структура объектов: отсутствующий канал, флаги read/write, 11-язычные имена",
-                "pt": "Correção da estrutura de objetos: canal em falta, flags read/write, nomes em 11 idiomas",
-                "nl": "Objectstructuur gecorrigeerd: ontbrekend kanaal, read/write-vlaggen, 11-talige namen",
-                "fr": "Correction de la structure des objets: canal manquant, indicateurs read/write, noms en 11 langues",
-                "it": "Correzione struttura oggetti: canale mancante, flag read/write, nomi in 11 lingue",
-                "es": "Corrección de la estructura de objetos: canal faltante, indicadores read/write, nombres en 11 idiomas",
-                "pl": "Poprawka struktury obiektów: brakujący kanał, flagi read/write, nazwy w 11 językach",
-                "uk": "Виправлення структури об'єктів: відсутній канал, прапори read/write, назви 11 мовами",
-                "zh-cn": "修复对象结构：缺失通道、读写标志、11语言状态名称"
-            }
         },
         "titleLang": {
             "en": "Faikout AC",

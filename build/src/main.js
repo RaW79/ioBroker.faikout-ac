@@ -79,7 +79,7 @@ class FaikoutAdapter extends utils.Adapter {
             port: mqttPort,
             username: mqttUser || undefined,
             password: mqttPassword || undefined,
-            clientId: `iobroker-faikout-${instanceId}`,
+            clientId: `iobroker-faikout-${this.host}-${instanceId}`,
             setTimeoutFn: (cb, ms) => this.setTimeout(cb, ms),
             clearTimeoutFn: (id) => this.clearTimeout(id),
         }, (topic, payload) => {
@@ -186,6 +186,7 @@ class FaikoutAdapter extends utils.Adapter {
             this.log.info('MQTT connected');
             for (const ctx of this.demandCtxMap.values()) {
                 this._publishDemandConfigParam(ctx.folder, 'lockmode', '1');
+                await this.setStateAsync(`${ctx.folder}.config.lockmode`, { val: true, ack: true });
                 if (ctx.cfg.demandLogLevel !== 'off') {
                     this.log.info(`Demand control: lockmode activated for "${ctx.folder}"`);
                 }
@@ -578,7 +579,7 @@ class FaikoutAdapter extends utils.Adapter {
             const targetId = `${this.namespace}.${folder}.env_set`;
             const publish = async () => {
                 try {
-                    const state = await this.getStateAsync(sensorStateId);
+                    const state = await this.getForeignStateAsync(sensorStateId);
                     if (!state || state.val === null || state.val === undefined) {
                         return;
                     }
@@ -997,7 +998,7 @@ class FaikoutAdapter extends utils.Adapter {
             this._sendDemand(ctx, target);
         }
         else {
-            this.log.info(`Demand [${folder}] ${goingUp ? '↑' : '↓'} ${ctx.lastSent}%→${target}% gehalten, noch ${Math.round((delay - elapsed) / 1000)}s`);
+            this.log.info(`Demand [${folder}] ${goingUp ? '↑' : '↓'} ${ctx.lastSent}%→${target}% held, ${Math.round((delay - elapsed) / 1000)}s remaining`);
         }
     }
     _sendDemand(ctx, demand) {
